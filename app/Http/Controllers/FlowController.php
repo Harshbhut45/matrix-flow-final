@@ -18,7 +18,6 @@ class FlowController extends Controller
     public function index()
     {
         $flows = Flow::with('department')->sortable()->paginate(\Config::get('constants.pagination_size'));
-        
         return view('pages.flows.index',compact('flows'));
     }
 

@@ -77,6 +77,7 @@
           <script src="{{ asset('lib/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
          
           <script src="{{ asset('assets/js/dashforge.js') }}"></script>
+          <script src="{{ asset('assets/js/sidebar.js') }}"></script>
           <script src="{{ ('/js/custom.js') }}"></script>
          
        
@@ -99,12 +100,7 @@
          {!! Toastr::message() !!} 
 
 
-     {{-- froala-editor js--}}
-        {{-- <script>
-          $(function() {
-            $('textarea#froala-editor').froalaEditor()
-          });
-        </script> --}}
+     
           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
@@ -168,5 +164,7 @@
 
             
             </script>
+
+
             </body>
       </html>
