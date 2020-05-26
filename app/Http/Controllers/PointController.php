@@ -41,8 +41,7 @@ class PointController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(PointRequest $request)
-    {
-        
+    { 
         $point = new Point();
         $point->content = $request->input('content');
         $point->version=$request->input('version');

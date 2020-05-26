@@ -1,11 +1,9 @@
 @extends('layouts.admin') 
 
-
 @php($title = 'Create User') 
 @push('title',yieldTitle($title)) 
 
 @section('breadcrumb-title', $title)
-
 
 @push('content-class', 'content-fixed')
 @push('container-class','container-fluid')
@@ -16,84 +14,80 @@
     <div class="row">
       <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12">
         <nav class="navigation" id="mainNav">
-            <li><a href="#" class="navigation__link parent active">Introduction</a></li>
-            <li><a href="#" class="navigation__link parent">Before You Submit</a></li>
-            <li><a href="#" class="navigation__link parent">1. Safety</a>
+            <li><a href="#introduction" class="navigation__link parent active">Introduction</a></li>
+            <li><a href="#before-you-submit" class="navigation__link parent">Before You Submit</a></li>
+            <li><a href="#safety" class="navigation__link parent">1. Safety</a>
                 <ul class="sidenav_item_children">
-                    <li><a href="#" class="navigation__link child">1.1 Objectionable Content</a> 
+                    <li><a href="#objectionable-content" class="navigation__link child">1.1 Objectionable Content</a> 
                     </li>
-                    <li><a href="#" class="navigation__link child">1.2 User Generated Content</a></li>
-                    <li><a href="#" class="navigation__link child">1.3 Kids Category</a></li>
-                    <li><a href="#" class="navigation__link child">1.4 Physical Harm</a></li>
-                    <li><a href="#" class="navigation__link child">1.5 Developer Information</a> <!----></li>
-                    <li><a href="#" class="navigation__link child">1.6 Data Security</a></li>
+                    <li><a href="#user-generated-content" class="navigation__link child">1.2 User Generated Content</a></li>
+                    <li><a href="#kids-category" class="navigation__link child">1.3 Kids Category</a></li>
+                    <li><a href="#physical-harm" class="navigation__link child">1.4 Physical Harm</a></li>
+                    <li><a href="#developer-information" class="navigation__link child">1.5 Developer Information</a> <!----></li>
+                    <li><a href="#data-security" class="navigation__link child">1.6 Data Security</a></li>
                 </ul>
             </li>
-            <li><a href="#" class="navigation__link parent">2. Performance</a>
+            <li><a href="#performance" class="navigation__link parent">2. Performance</a>
                 <ul class="sidenav_item_children">
-                    <li><a href="#" class="navigation__link child">2.1 App Completeness</a></li>
+                    <li><a href="#app-completeness" class="navigation__link child">2.1 App Completeness</a></li>
                     <li><a href="#beta-testing" class="navigation__link child">2.2 Beta Testing</a></li>
-                    <li><a href="#" class="navigation__link child">2.3 Accurate Metadata</a></li>
-                    <li><a href="#" class="navigation__link child">2.4 Hardware Compatibility</a></li>
-                    <li><a href="#" class="navigation__link child">2.5 Software Requirements</a></li>
+                    <li><a href="#accurate-metadata" class="navigation__link child">2.3 Accurate Metadata</a></li>
+                    <li><a href="#hardware-compatibility" class="navigation__link child">2.4 Hardware Compatibility</a></li>
+                    <li><a href="#software-requirements" class="navigation__link child">2.5 Software Requirements</a></li>
                 </ul>
 
             </li>
-            <li><a href="#" class="navigation__link parent">3. Business</a>
+            <li><a href="#business" class="navigation__link parent">3. Business</a>
                 <ul class="sidenav_item_children">
-                    <li><a href="#" class="navigation__link child">3.1 Payments</a></li>
-                    <li><a href="#" class="navigation__link child">3.1.1 In-App Purchase</a></li>
-                    <li><a href="#" class="navigation__link child">3.1.2 Subscriptions</a></li>
-                    <li><a href="#" class="navigation__link child">3.1.3(a) “Reader” Apps</a></li>
-                    <li><a href="#" class="navigation__link child">3.1.3(b) Multiplatform Services</a></li>
-                    <li><a href="#" class="navigation__link child">3.1.4 Hardware-Specific Content</a></li>
-                    <li><a href="#" class="navigation__link child">3.1.5(a) Goods and Services Outside of the App</a></li>
-                    <li><a href="#" class="navigation__link child">3.1.5(b) Cryptocurrencies</a> </li>
-                    <li><a href="#" class="navigation__link child">3.1.6 Apple Pay</a></li>
-                    <li><a href="#" class="navigation__link child">3.1.7 Advertising</a></li>
-                    <li><a href="#" class="navigation__link child">3.2 Other Business Model Issues</a></li>
-                    <li><a href="#" class="navigation__link child">3.2.1 Acceptable</a></li>
-                    <li><a href="#" class="navigation__link child">3.2.2 Unacceptable</a></li>
+                    <li><a href="#payments" class="navigation__link child">3.1 Payments</a></li>
+                    <li><a href="#in-app-purchase" class="navigation__link child">3.1.1 In-App Purchase</a></li>
+                    <li><a href="#subscriptions" class="navigation__link child">3.1.2 Subscriptions</a></li>
+                    <li><a href="#reader-apps" class="navigation__link child">3.1.3(a) “Reader” Apps</a></li>
+                    <li><a href="#multiplatform-services" class="navigation__link child">3.1.3(b) Multiplatform Services</a></li>
+                    <li><a href="#hardware-specific-content" class="navigation__link child">3.1.4 Hardware-Specific Content</a></li>
+                    <li><a href="#goods-and-services" class="navigation__link child">3.1.5(a) Goods and Services Outside of the App</a></li>
+                    <li><a href="#cryptocurrencies" class="navigation__link child">3.1.5(b) Cryptocurrencies</a> </li>
+                    <li><a href="#apple-pay" class="navigation__link child">3.1.6 Apple Pay</a></li>
+                    <li><a href="#advertising" class="navigation__link child">3.1.7 Advertising</a></li>
+                    <li><a href="#other-business" class="navigation__link child">3.2 Other Business Model Issues</a></li>
+                    <li><a href="#acceptable" class="navigation__link child">3.2.1 Acceptable</a></li>
+                    <li><a href="#unacceptable" class="navigation__link child">3.2.2 Unacceptable</a></li>
                 </ul>
             </li>    
-            <li><a href="#" class="navigation__link parent">4. Design</a>
+            <li><a href="#design" class="navigation__link parent">4. Design</a>
                 <ul class="sidenav_item_children">
-                    <li><a href="#" class="navigation__link child">4.1 Copycats</a></li>
-                    <li><a href="#" class="navigation__link child">4.2 Minimum Functionality</a></li>
-                    <li><a href="#" class="navigation__link child">4.3 Spam</a></li>
-                    <li><a href="#" class="navigation__link child">4.4 Extensions</a></li>
-                    <li><a href="#" class="navigation__link child">4.5 Apple Sites and Services</a></li>
-                    <li><a href="#" class="navigation__link child">4.6 Alternate App Icons</a></li>
-                    <li><a href="#" class="navigation__link child">4.7 HTML5 Games, Bots, etc.</a></li>
-                    <li><a href="#" class="navigation__link child">4.8 Sign in with Apple</a></li>
+                    <li><a href="#copycats" class="navigation__link child">4.1 Copycats</a></li>
+                    <li><a href="#minimum-functionality" class="navigation__link child">4.2 Minimum Functionality</a></li>
+                    <li><a href="#spam" class="navigation__link child">4.3 Spam</a></li>
+                    <li><a href="#extensions" class="navigation__link child">4.4 Extensions</a></li>
+                    <li><a href="#apple-sites-and-services" class="navigation__link child">4.5 Apple Sites and Services</a></li>
+                    <li><a href="#alternate-app-icons" class="navigation__link child">4.6 Alternate App Icons</a></li>
+                    <li><a href="#games" class="navigation__link child">4.7 HTML5 Games, Bots, etc.</a></li>
+                    <li><a href="#sign-in-with-apple" class="navigation__link child">4.8 Sign in with Apple</a></li>
                 </ul>
             </li>
-            <li><a href="#" class="navigation__link parent">5. Legal</a> 
+            <li><a href="#legal" class="navigation__link parent">5. Legal</a> 
                     <ul class="sidenav_item_children">
-                        <li><a href="#" class="navigation__link child">5.1 Privacy</a></li>
-                        <li><a href="#" class="navigation__link child">5.1.1 Data Collection and Storage</a></li>
-                        <li><a href="#" class="navigation__link child">5.1.2 Data Use and Sharing</a></li>
-                        <li><a href="#" class="navigation__link child">5.1.3 Health and Health Research</a></li>
-                        <li><a href="#" class="navigation__link child">5.1.4 Kids</a></li>
-                        <li><a href="#" class="navigation__link child">5.1.5 Location Services</a></li>
-                        <li><a href="#" class="navigation__link child">5.2 Intellectual Property</a></li>
-                        <li><a href="#" class="navigation__link child">5.3 Gaming, Gambling, and Lotteries</a></li>
-                        <li><a href="#" class="navigation__link child">5.4 VPN Apps</a></li>
-                        <li><a href="#" class="navigation__link child">5.5 Mobile Device Management</a></li>
-                        <li><a href="#" class="navigation__link child">5.6 Developer Code of Conduct</a></li>
+                        <li><a href="#privacy" class="navigation__link child">5.1 Privacy</a></li>
+                        <li><a href="#data-collection-and-storage" class="navigation__link child">5.1.1 Data Collection and Storage</a></li>
+                        <li><a href="#data-use-and-sharing" class="navigation__link child">5.1.2 Data Use and Sharing</a></li>
+                        <li><a href="#health-and-health-research" class="navigation__link child">5.1.3 Health and Health Research</a></li>
+                        <li><a href="#kids" class="navigation__link child">5.1.4 Kids</a></li>
+                        <li><a href="#location-services" class="navigation__link child">5.1.5 Location Services</a></li>
+                        <li><a href="#intellectual-property" class="navigation__link child">5.2 Intellectual Property</a></li>
+                        <li><a href="#gaming" class="navigation__link child">5.3 Gaming, Gambling, and Lotteries</a></li>
+                        <li><a href="#vpn-apps" class="navigation__link child">5.4 VPN Apps</a></li>
+                        <li><a href="#mobile-device-management" class="navigation__link child">5.5 Mobile Device Management</a></li>
+                        <li><a href="#developer-code-of-conduct" class="navigation__link child">5.6 Developer Code of Conduct</a></li>
                     </ul>
             </li>
-            <li><a href="#" class="navigation__link parent">After You Submit</a></li>
+            <li><a href="#after-you-submit" class="navigation__link parent">After You Submit</a></li>
         </nav>
     </div>
 
-
     <div class="col-lg-9 col-md-9  col-sm-12 col-xs-12 page_head">
         <div class="page-section" id="1">
-         
-          
           <h4 data-sidenav="" id="introduction">Introduction</h4>
-          
               <p>The guiding principle of the App&nbsp;Store is simple - we want to provide a safe experience for users to get apps and a great opportunity for all developers to be successful. We do this by offering a highly curated App&nbsp;Store where every app is reviewed by experts and an editorial team helps users discover new apps every day. For everything else there is always the open Internet. If the App&nbsp;Store model and guidelines are not best for your app or business idea that’s okay, we provide Safari for a great web experience too.</p>
               <p>On the following pages you will find our latest guidelines arranged into five clear sections: Safety, Performance, Business, Design, and Legal. The App&nbsp;Store is always changing and improving to keep up with the needs of our customers and our products. Your apps should change and improve as well in order to stay on the <span class="nowrap">App&nbsp;Store.</span></p>
               <p>A few other points to keep in mind:</p>
@@ -106,7 +100,6 @@
               <li>Some features and technologies that are not generally available to developers may be offered as an entitlement for limited use cases. For example, we offer entitlements for CarPlay&nbsp;Audio, HyperVisor, and Privileged File Operations. Review our documentation on developer.apple.com to learn more about entitlements.</li>
               </ul>
               <p>We hope these guidelines help you sail through the App Review process, and that approvals and rejections remain consistent across the board. This is a living document; new apps presenting new questions may result in new rules at any time. Perhaps your app will trigger this. We love this stuff too, and honor what you do. We’re really trying our best to create the best platform in the world for you to express your talents and make a living, too.</p>
-
         </div>
         <div class="page-section" id="2">
             <h3 data-sidenav="" id="before-you-submit">Before You Submit</h3>
@@ -218,8 +211,6 @@
         </div>
       </ul>
        
-       
-       
         <div class="page-section" id="">
             <h3 data-sidenav="" id="performance"><span id="2"></span>2. Performance</h3>
                 <ul class="no-bullet">
@@ -274,7 +265,7 @@
                 </ul>
             </li>
         </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="2.5 Software Requirements" id="software-requirements"><span id="2.5"></span><strong>2.5 Software Requirements</strong>
                             <ul class="no-bullet margin-top-small">
                                 <li id="2.5.1"><strong>2.5.1</strong> Apps may only use public APIs and must run on the currently shipping OS. Learn more about <a href="#">public APIs</a>. Keep your apps up-to-date and make sure you phase out any deprecated features, frameworks or technologies that will no longer be supported in future versions of an OS. Apps should use APIs and frameworks for their intended purposes and indicate that integration in their app description. For example, the HomeKit framework should provide home automation services; and HealthKit should be used for health and fitness purposes and integrate with the Health app.</li>
@@ -301,17 +292,17 @@
                             </ul>
                         </li>
                     </ul>
-        </div>
-        <div class="page-section" id="">
+                </div>
+            <div class="page-section" id="">
              <h3 data-sidenav="" id="business"><span id="3"></span>3. Business</h3>
                     <p class="section-intro">There are many ways to monetize your app on the <span class="nowrap">App&nbsp;Store.</span> If your business model isn’t obvious, make sure to explain in its metadata and App Review notes. If we can’t understand how your app works or your in-app purchases aren’t immediately obvious, it will delay your review and may trigger a rejection. And while pricing is up to you, we won’t distribute apps and in-app purchase items that are clear rip-offs. We’ll reject expensive apps that try to cheat users with irrationally high prices.</p>
                     <p class="section-intro margin-bottom-small">If we find that you have attempted to manipulate reviews, inflate your chart rankings with paid, incentivized, filtered, or fake feedback, or engage with third-party services to do so on your behalf, we will take steps to preserve the integrity of the <span class="nowrap">App&nbsp;Store,</span> which may include expelling you from the Developer Program.</p>
                      </div>
-        <div class="page-section" id="">
+                <div class="page-section" id="">
                     <ul class="no-bullet">
-                        <li data-sidenav="3.1 Payments" id="payments"><span id="3.1"></span><strong>3.1 Payments</strong>
+                        <li data-sidenav="3.1 Payments" id="payments"><span id="3.1 "></span><strong>3.1 Payments</strong>
                              </div>
-        <div class="page-section" id="">
+                        <div class="page-section" id="">
                             <ul class="no-bullet margin-top-small">
                                 <li data-sidenav="3.1.1 In-App Purchase" id="in-app-purchase"><span id="3.1.1"></span><strong>3.1.1 In-App Purchase:</strong>
                                     <ul class="disc no-margin-top">
@@ -326,7 +317,7 @@
                                     </ul>
                                 </li>
                                 </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="3.1.2 Subscriptions" id="subscriptions"><span id="3.1.2"></span><strong>3.1.2 Subscriptions:</strong> Apps may offer auto-renewing in-app purchase subscriptions, regardless of category on the <span class="nowrap">App&nbsp;Store.</span> When incorporating auto-renewable subscriptions into your app, be sure to follow the guidelines below.</li>
                                 <li id="permissible-uses"><span id="3.1.2a"></span><strong>3.1.2(a) Permissible uses:</strong> If you offer an auto-renewing subscription, you must provide ongoing value to the customer, and the subscription period must last at least seven days and be available across all of the user’s devices. While the following list is not exhaustive, examples of appropriate subscriptions include: new game levels; episodic content; multi-player support; apps that offer consistent, substantive updates; access to large collections of, or continually updated, media content; software as a service (“SAAS”); and cloud support. In addition:
                                     <ul class="disc margin-top-small">
@@ -343,19 +334,19 @@
                                 <li id="upgrades-and-downgrades"><span id="3.1.2b"></span><strong>3.1.2(b) Upgrades and Downgrades:</strong> Users should have a seamless upgrade/downgrade experience and should not be able to inadvertently subscribe to multiple variations of the same thing. Review <a href="#">best practices</a> on managing your subscription upgrade and downgrade options.</li>
                                 <li><span id="3.1.2c"></span><strong>3.1.2(c) Subscription Information:</strong> Before asking a customer to subscribe, you should clearly describe what the user will get for the price. How many issues per month? How much cloud storage? What kind of access to your service? Ensure you clearly communicate the requirements described in Schedule 2 of the <span class="nowrap">Apple Developer</span> Program License Agreement, found in <a href="#">Agreements, Tax, and Banking</a>.</li>
                                 </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="3.1.3(a) “Reader” Apps" id="reader-apps"><span id="3.1.3a"></span><strong>3.1.3(a) “Reader” Apps:</strong> Apps may allow a user to access previously purchased content or content subscriptions (specifically: magazines, newspapers, books, audio, music, video, access to professional databases, VoIP, cloud storage, and approved services such as classroom management apps), provided that you agree not to directly or indirectly target iOS users to use a purchasing method other than in-app purchase, and your general communications about other purchasing methods are not designed to discourage use of in-app purchase.</li>
                                  </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="3.1.3(b) Multiplatform Services" id="multiplatform-services"><span id="3.1.3b"></span><strong>3.1.3(b) Multiplatform Services:</strong> Apps that operate across multiple platforms may allow users to access content, subscriptions, or features they have acquired elsewhere, including consumable items in multi-platform games, provided those items are also available as in-app purchases within the app. You must not directly or indirectly target iOS users to use a purchasing method other than in-app purchase, and your general communications about other purchasing methods must not discourage use of in-app purchase.</li>
                                  </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="3.1.4 Hardware-Specific Content" id="hardware-specific-content"><span id="3.1.4"></span><strong>3.1.4 Hardware-Specific Content:</strong> In limited circumstances, such as when features are dependent upon specific hardware to function, the app may unlock that functionality without using in-app purchase (e.g. an astronomy app that adds features when synced with a telescope). App features that work in combination with an approved physical product (such as a toy) on an <em>optional</em> basis may unlock functionality without using in-app purchase, provided that an in-app purchase option is available as well. You may not, however, require users to purchase unrelated products or engage in advertising or marketing activities to unlock app functionality.</li>
-                                 </div>
-        <div class="page-section" id="">
+                            </div>
+                            <div class="page-section" id="">
                                 <li data-sidenav="3.1.5(a) Goods and Services Outside of the App" id="goods-and-services"><span id="3.1.5a"></span><strong>3.1.5(a) Goods and Services Outside of the App:</strong> If your app enables people to purchase goods or services that will be consumed outside of the app, you must use purchase methods other than in-app purchase to collect those payments, such as Apple Pay or traditional credit card entry.</li>
                                  </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="3.1.5(b) Cryptocurrencies" id="cryptocurrencies"><span id="3.1.5b"></span><strong>3.1.5(b) Cryptocurrencies:</strong>
                                     <ul class="disc margin-top-small">
                                         <li>(i) Wallets: Apps may facilitate virtual currency storage, provided they are offered by developers enrolled as an organization.</li>
@@ -366,7 +357,7 @@
                                     </ul>
                                 </li>
                                  </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="3.1.6 Apple Pay" id="apple-pay"><span id="3.1.6"></span><strong>3.1.6 Apple Pay:</strong> Apps using Apple Pay must provide all material purchase information to the user prior to sale of any good or service and must use Apple Pay branding and user interface elements correctly, as described in the <a href="#">Apple Pay Identity Guidelines</a> and <a href="#">Human Interface Guidelines</a>. Apps using Apple Pay to offer recurring payments must, at a minimum, disclose the following information:
                                     <ul class="disc margin-top-small">
                                         <li>The length of the renewal term and the fact that it will continue until canceled</li>
@@ -376,16 +367,16 @@
                                     </ul>
                                 </li>
                                  </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="3.1.7 Advertising" id="advertising"><span id="3.1.7"></span><strong>3.1.7 Advertising:</strong> Ads displayed in an app must be appropriate for the app’s age rating, allow the user to see all information used to target them for that ad (without requiring the user to leave the app), and may not engage in targeted or behavioral advertising based on sensitive user data such as health/medical data (e.g. from the HealthKit APIs), school and classroom data (e.g. from ClassKit), or from kids (e.g. from apps in the Kids Category), etc. Interstitial ads or ads that interrupt or block the user experience must clearly indicate that they are an ad, must not manipulate or trick users into tapping into them, and must provide easily accessible and visible close/skip buttons large enough for people to easily dismiss the ad.</li>
                             </ul>
                         </li>
                         </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="3.2 Other Business Model Issues" id="other-business-model-issues"><span id="3.2"></span><strong>3.2 Other Business Model Issues</strong>
                             <p>The lists below are not exhaustive, and your submission may trigger a change or update to our policies, but here are some additional do’s and don’ts to keep in mind:</p>
                              </div>
-        <div class="page-section" id="">
+                        <div class="page-section" id="">
                             <ul class="no-bullet margin-top-small">
                                 <li data-sidenav="3.2.1 Acceptable" id="acceptable"><span id="3.2.1"></span><strong>3.2.1 Acceptable</strong>
                                     <ul class="no-bullet margin-top-small">
@@ -400,7 +391,7 @@
                                     </ul>
                                 </li>
                             </div>
-        <div class="page-section" id="">
+                        <div class="page-section" id="">
                                 <li data-sidenav="3.2.2 Unacceptable" id="unacceptable"><span id="3.2.2"></span><strong>3.2.2 Unacceptable</strong>
                                     <ul class="no-bullet margin-top-small">
                                         <li><strong>(i)</strong> Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App&nbsp;Store or as a general-interest collection.</li>
@@ -423,11 +414,11 @@
             <h3 data-sidenav="" id="design"><span id="4"></span>4. Design</h3>
                     <p class="section-intro">Apple customers place a high value on products that are simple, refined, innovative, and easy to use, and that’s what we want to see on the <span class="nowrap">App&nbsp;Store.</span> Coming up with a great design is up to you, but the following are minimum standards for approval to the <span class="nowrap">App&nbsp;Store.</span> And remember that even after your app has been approved, you should update your app to ensure it remains functional and engaging to new and existing customers. Apps that stop working or offer a degraded experience may be removed from the App&nbsp;Store at any time.</p>
                      </div>
-        <div class="page-section" id="">
+                <div class="page-section" id="">
                     <ul class="no-bullet">
                         <li data-sidenav="4.1 Copycats" id="copycats"><span id="4.1"></span><strong>4.1 Copycats</strong><p>Come up with your own ideas. We know you have them, so make yours come to life. Don’t simply copy the latest popular app on the <span class="nowrap">App&nbsp;Store,</span> or make some minor changes to another app’s name or UI and pass it off as your own. In addition to risking an intellectual property infringement claim, it makes the App&nbsp;Store harder to navigate and just isn’t fair to your fellow developers.</p></li>
                          </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="4.2 Minimum Functionality" id="minimum-functionality"><span id="4.2"></span><strong>4.2 Minimum Functionality</strong>
                             <p>Your app should include features, content, and UI that elevate it beyond a repackaged website. If your app is not particularly useful, unique, or “app-like,” it doesn’t belong on the <span class="nowrap">App&nbsp;Store.</span> If your App doesn’t provide some sort of lasting entertainment value, it may not be accepted. Apps that are simply a song or movie should be submitted to the iTunes Store. Apps that are simply a book or game guide should be submitted to the Apple Books Store.</p>
                             <ul class="no-bullet margin-top-small">
@@ -455,10 +446,10 @@
                             </ul>
                         </li>
                          </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="4.3 Spam" id="spam"><span id="4.3"></span><strong>4.3 Spam</strong><p>Don’t create multiple Bundle IDs of the same app. If your app has different versions for specific locations, sports teams, universities, etc., consider submitting a single app and provide the variations using in-app purchase. Also avoid piling on to a category that is already saturated; the App&nbsp;Store has enough fart, burp, flashlight, and Kama Sutra apps, etc. already. Spamming the store may lead to your removal from the Developer Program.</p></li>
                          </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="4.4 Extensions" id="extensions"><span id="4.4"></span><strong>4.4 Extensions</strong>
                             <p>Apps hosting or containing extensions must comply with the <a href="#">App Extension Programming Guide</a> or the <a href="#">Safari App Extensions Guide</a> and should include some functionality, such as help screens and settings interfaces where possible. You should clearly and accurately disclose what extensions are made available in the app’s marketing text, and the extensions may not include marketing, advertising, or in-app purchases.</p>
                             <ul class="no-bullet margin-top-small">
@@ -492,7 +483,7 @@
                             </ul>
                         </li>
                     </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="4.5 Apple Sites and Services" id="apple-sites-and-services"><span id="4.5"></span><strong>4.5 Apple Sites and Services</strong>
                             <ul class="no-bullet margin-top-small">
                                 <li id="4.5.1"><strong>4.5.1</strong> Apps may use approved Apple RSS feeds such as the iTunes Store RSS feed, but may not scrape any information from Apple sites (e.g. apple.com, the iTunes Store, <span class="nowrap">App&nbsp;Store,</span> <span class="nowrap">App&nbsp;Store Connect,</span> developer portal, etc.) or create rankings using this information.</li>
@@ -509,11 +500,11 @@
                             </ul>
                         </li>
                     </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="4.6 Alternate App Icons" id="alternate-app-icons"><span id="4.6"></span><strong>4.6 Alternate App Icons</strong>
                             <p>Apps may display customized icons, for example, to reflect a sports team preference, provided that each change is initiated by the user and the app includes settings to revert to the original icon. All icon variants must relate to the content of the app and changes should be consistent across all system assets, so that the icons displayed in Settings, Notifications, etc. match the new springboard icon. This feature may not be used for dynamic, automatic, or serial changes, such as to reflect up-to-date weather information, calendar notifications, etc.</p></li>
                         </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="4.7 HTML5 Games, Bots, etc." id="third-party-software"><span id="4.7"></span><strong>4.7 HTML5 Games, Bots, etc.</strong>
                             <p>Apps may contain or run code that is not embedded in the binary (e.g. HTML5-based games, bots, etc.), as long as code distribution isn’t the main purpose of the app, the code is not offered in a store or store-like interface, and provided that the software (1) is free or purchased using in-app purchase; (2) only uses capabilities available in a standard WebKit view (e.g. it must open and run natively in Safari without modifications or additional software); your app must use WebKit and JavaScript Core to run third-party software and should not attempt to extend or expose native platform APIs to third-party software; (3) is offered by developers that have joined the <span class="nowrap">Apple Developer</span> Program and signed the <span class="nowrap">Apple Developer</span> Program License Agreement; (4) does not provide access to real money gaming, lotteries, or charitable donations; (5) adheres to the terms of these App Review Guidelines (e.g. does not include objectionable content); and (6) does not support digital commerce. Upon request, you must provide an index of software and metadata available in your app. It must include <span class="nowrap">Apple Developer</span> Program Team IDs for the providers of the software along with a URL which App Review can use to confirm that the software complies with the requirements above.</p></li>
 
@@ -534,12 +525,12 @@
             <h3 data-sidenav="" id="legal"><span id="5"></span>5. Legal</h3>
                     <p class="section-intro">Apps must comply with all legal requirements in any location where you make them available (if you’re not sure, check with a lawyer). We know this stuff is complicated, but it is your responsibility to understand and make sure your app conforms with all local laws, not just the guidelines below. And of course, apps that solicit, promote, or encourage criminal or clearly reckless behavior will be rejected. In extreme cases, such as apps that are found to facilitate human trafficking and/or the exploitation of children, appropriate authorities will be notified.</p>
                      </div>
-        <div class="page-section" id="">
+                <div class="page-section" id="">
                     <ul class="no-bullet">
                         <li data-sidenav="5.1 Privacy" id="privacy"><span id="5.1"></span><strong>5.1 Privacy</strong>
                             <p>Protecting user privacy is paramount in the Apple ecosystem, and you should use care when handling personal data to ensure you’ve complied with <a href="#">privacy best practices</a>, applicable laws and the terms of the <a href="#"><span class="nowrap">Apple Developer</span> Program License Agreement</a>, not to mention customer expectations. More particularly:</p>
                              </div>
-        <div class="page-section" id="">
+                        <div class="page-section" id="">
                             <ul class="no-bullet margin-top-small">
                                 <li data-sidenav="5.1.1 Data Collection and Storage" id="data-collection-and-storage"><span id="5.1.1"></span><strong>5.1.1 Data Collection and Storage</strong>
                                     <ul class="no-bullet margin-top-small">
@@ -560,7 +551,7 @@
                                     </ul>
                                 </li>
                                  </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="5.1.2 Data Use and Sharing" id="data-use-and-sharing"><span id="5.1.2"></span><strong>5.1.2 Data Use and Sharing</strong>
                                     <ul class="no-bullet margin-top-small">
                                         <li><strong>(i) </strong>Unless otherwise permitted by law, you may not use, transmit, or share someone’s personal data without first obtaining their permission. You must provide access to information about how and where the data will be used. Data collected from apps may only be shared with third parties to improve the app or serve advertising (in compliance with the <a href="#"><span class="nowrap">Apple Developer</span> Program License Agreement</a>.). Apps that share user data without user consent or otherwise complying with data privacy laws may be removed from sale and may result in your removal from the <span class="nowrap">Apple Developer</span> Program.</li>
@@ -573,7 +564,7 @@
                                     </ul>
                                 </li>
                                  </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="5.1.3 Health and Health Research" id="health-and-health-research"><span id="5.1.3"></span><strong>5.1.3 Health and Health Research</strong>
                                     <p>Health, fitness, and medical data are especially sensitive and apps in this space have some additional rules to make sure customer privacy is protected:</p>
                                     <ul class="no-bullet margin-top-small">
@@ -584,7 +575,7 @@
                                     </ul>
                                 </li>
                                  </div>
-        <div class="page-section" id="">
+                            <div class="page-section" id="">
                                 <li data-sidenav="5.1.4 Kids" id="kids"><span id="5.1.4"></span><strong>5.1.4 Kids</strong>
                                     <p>For many reasons, it is critical to use care when dealing with personal data from kids, and we encourage you to carefully review all the requirements for complying with laws like the Children’s Online Privacy Protection Act (“COPPA”), the European Union’s General Data Protection Regulation (“GDPR”), and any other applicable regulations or laws.</p>
                                     <p>Apps may ask for birthdate and parental contact information only for the purpose of complying with these statutes, but must include some useful functionality or entertainment value regardless of a person’s age.</p>
@@ -593,14 +584,14 @@
                                     <p>As a reminder, <a href="#">Guideline 2.3.8</a> requires that use of terms like “For Kids” and “For Children” in app metadata is reserved for the Kids Category. Apps not in the Kids Category cannot include any terms in app name, subtitle, icon, screenshots or description that imply the main audience for the app is children.</p>
                                 </li>
                                  </div>
-        <div class="page-section" id="">
+                                <div class="page-section" id="">
                                 <li data-sidenav="5.1.5 Location Services" id="location"><span id="5.1.5"></span><strong>5.1.5 Location Services</strong>
                                     <p>Use Location services in your app only when it is directly relevant to the features and services provided by the app. Location-based APIs shouldn’t be used to provide emergency services or autonomous control over vehicles, aircraft, and other devices, except for small devices such as lightweight drones and toys, or remote control car alarm systems, etc. Ensure that you notify and obtain consent before collecting, transmitting, or using location data. If your app uses location services, be sure to explain the purpose in your app; refer to the <a href="#">Human Interface Guidelines</a> for best practices on doing so.</p>
                                 </li>
                             </ul>
                         </li>
                          </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="5.2 Intellectual Property" id="intellectual-property"><span id="5.2"></span><strong>5.2 Intellectual Property</strong>
                             <p>Make sure your app only includes content that you created or that you have a license to use. Your app may be removed if you’ve stepped over the line and used content without permission. Of course, this also means someone else’s app may be removed if they’ve “borrowed” from your work. If you believe your intellectual property has been infringed by another developer on the <span class="nowrap">App&nbsp;Store,</span> submit a claim via our <a href="#">web form</a>. Laws differ in different countries, but at the very least, make sure to avoid the following common errors:</p>
                             <ul class="no-bullet margin-top-small">
@@ -612,7 +603,7 @@
                             </ul>
                         </li>
                          </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="5.3 Gaming, Gambling, and Lotteries" id="gaming-gambling-and-lotteries"><span id="5.3"></span><strong>5.3 Gaming, Gambling, and Lotteries</strong>
                             <p>Gambling, gaming, and lotteries can be tricky to manage and tend to be one of the most regulated offerings on the <span class="nowrap">App&nbsp;Store.</span> Only include this functionality if you’ve fully vetted your legal obligations everywhere you make your app available and are prepared for extra time during the review process. Some things to keep in mind:</p>
                             <ul class="no-bullet margin-top-small">
@@ -623,24 +614,23 @@
                             </ul>
                         </li>
                          </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="5.4 VPN Apps" id="vpn-apps"><span id="5.4"></span><strong>5.4 VPN Apps</strong>
                             <p>Apps offering VPN services must utilize the <a href="#">NEVPNManager API</a> and may only be offered by developers enrolled as an organization. You must make a clear declaration of what user data will be collected and how it will be used on an app screen prior to any user action to purchase or otherwise use the service. Apps offering VPN services may not sell, use, or disclose to third parties any data for any purpose, and must commit to this in their privacy policy. VPN apps must not violate local laws, and if you choose to make your VPN app available in a territory that requires a VPN license, you must provide your license information in the App Review Notes field. Parental control, content blocking, and security apps, among others, from approved providers may also use the NEVPNManager API. Apps that do not comply with this guideline will be removed from the App&nbsp;Store and you may be removed from the <span class="nowrap">Apple Developer</span> Program.</p>
                         </li>
                          </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="5.5 Mobile Device Management" id="mobile-device-management"><span id="5.5"></span><strong>5.5 Mobile Device Management</strong>
                             <p>Mobile Device Management Apps that offer Mobile Device Management (MDM) services must request this capability from Apple. Such apps may only be offered by commercial enterprises (such as business organizations, educational institutions, or government agencies), and in limited cases, companies using MDM for parental control services. You must make a clear declaration of what user data will be collected and how it will be used on an app screen prior to any user action to purchase or otherwise use the service. MDM apps must not violate local laws. Apps offering MDM services may not sell, use, or disclose to third parties any data for any purpose, and must commit to this in their privacy policy. Apps that do not comply with this guideline will be removed from the App&nbsp;Store and you may be removed from the <span class="nowrap">Apple Developer</span> Program.</p>
                         </li>
                          </div>
-        <div class="page-section" id="">
+                    <div class="page-section" id="">
                         <li data-sidenav="5.6 Developer Code of Conduct" id="code-of-conduct"><span id="5.6"></span><strong>5.6 Developer Code of Conduct</strong>
                             <p>Please treat everyone with respect, whether in your responses to App&nbsp;Store reviews, customer support requests, or when communicating with Apple, including your responses in Resolution Center. Do not engage in harassment of any kind, discriminatory practices, intimidation, bullying, and don’t encourage others to engage in any of the above.</p>
                             <p>Customer trust is the cornerstone of the <span class="nowrap">App&nbsp;Store’s</span> success. Apps should never prey on users or attempt to rip-off customers, trick them into making unwanted purchases, force them to share unnecessary data, raise prices in a tricky manner, charge for features or content that are not delivered, or engage in any other manipulative practices within or outside of the app.</p>
                         </li>
                     </ul>
-
-        </div>
+                </div>
         <div class="page-section" id="">
             <h3 data-sidenav="" id="after-you-submit">After You Submit</h3>
                     <p>Once you’ve submitted your app and metadata in <span class="nowrap">App&nbsp;Store Connect</span> and you’re in the review process, here are some things to keep in mind:</p>

@@ -83,6 +83,7 @@ body {
 /*****sidebar*****/
 .page-section {
     padding-left: 45px;
+    padding-bottom: 2em;
   }
   .navigation {
     position: fixed;
