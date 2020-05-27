@@ -1,5 +1,6 @@
 body {
     background: #f9f9f9!important;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif!important;
 }
 .footer-button {
     display: flex;
@@ -79,10 +80,16 @@ body {
 .fr-box.fr-basic .fr-element {
     min-height: 150px!important;
 }
-
+.section-side {
+  padding-top: 15px;
+}
 /*****sidebar*****/
+.mainNav-sidebar {
+  display: flex;
+  justify-content: center;
+}
 .page-section {
-    padding-left: 45px;
+    padding-left: 25px;
     padding-bottom: 2em;
   }
   .navigation {
@@ -95,6 +102,13 @@ body {
     will-change: opacity;
     transition-property: opacity;
     border-left: 1px solid #e3e3e3;
+    width: 19%;
+    padding-left: 1.5em;
+    margin-left: 50px;
+  }
+  .sidenav_item_children li {
+    margin: 0;
+    opacity: 0.6;
   }
   .navigation li {
     list-style: none;
@@ -124,7 +138,7 @@ body {
     border-top: 1px solid #dadada;
   }
   .page_head p {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.525;
     color: #333333;
@@ -132,7 +146,7 @@ body {
     letter-spacing: 0.004em;
   }
   .page_head li {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.525;
     color: #333333;
@@ -141,7 +155,7 @@ body {
   }
   .page_head span {
     color: #0070c9;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 400;
   }
   .parent {
@@ -155,21 +169,33 @@ body {
     color: #111;
     display: block;
     border-left: 1px solid rgba(0, 0, 0, 1);
-  
+    opacity: 1;
+    padding-left: 1.4em;
+    margin-left: -1.55em;
   }
   .navigation__link.child {
     display: none;
   }
+  .child {
+    padding: 0.2em 0em;
+  }
+  .sidenav_item_children li {
+    margin: 0.2em 0em;
+    opacity: 0.6;
+}
   .navigation__link {
-    padding: 0.2em 0.8em;
-    color: rgba(0, 0, 0, 0.5);
+    padding: 0.2em 0em;
+    /* color: rgba(0, 0, 0, 0.5); */
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 550;
     will-change: opacity;
     transition-property: opacity;
     margin-left: -1px;
+    opacity: 0.5;
+    color: #111;
   }
   .sidenav_item_children {
     padding-left: 0;
     margin: 0;
   }
+  

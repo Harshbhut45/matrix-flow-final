@@ -375,7 +375,7 @@
                     <div class="page-section" id="">
                         <li data-sidenav="3.2 Other Business Model Issues" id="other-business-model-issues"><span id="3.2"></span><strong>3.2 Other Business Model Issues</strong>
                             <p>The lists below are not exhaustive, and your submission may trigger a change or update to our policies, but here are some additional do’s and don’ts to keep in mind:</p>
-                             </div>
+                    </div>
                         <div class="page-section" id="">
                             <ul class="no-bullet margin-top-small">
                                 <li data-sidenav="3.2.1 Acceptable" id="acceptable"><span id="3.2.1"></span><strong>3.2.1 Acceptable</strong>
