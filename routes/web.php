@@ -49,4 +49,7 @@ Route::post('/flows/{id}', 'FlowController@update')->name('flows.update');
 Route::get('/flows/{id}','FlowController@destroy')->name('flows.delete');
 
 
-Route::get('/show/{id}', 'PointController@show')->name('points.show');
+// Route::get('/show/{id}', 'PointController@show')->name('points.show');
+
+
+Route::get('/show/{id}', 'PublicController@show')->name('points.show');

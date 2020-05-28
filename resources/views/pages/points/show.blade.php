@@ -14,8 +14,10 @@
     <div class="row">
       <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12">
         <nav class="navigation" id="mainNav">
-            <li><a href="#introduction" class="navigation__link parent active">Introduction</a></li>
-            <li><a href="#before-you-submit" class="navigation__link parent">Before You Submit</a></li>
+            @foreach ($flows as $flow)
+            <li><a href="#{{ $flow->title }}" class="navigation__link parent active">{{ $flow->title }}</a></li>
+            @endforeach
+            {{-- <li><a href="#before-you-submit" class="navigation__link parent">Before You Submit</a></li>
             <li><a href="#safety" class="navigation__link parent">1. Safety</a>
                 <ul class="sidenav_item_children">
                     <li><a href="#objectionable-content" class="navigation__link child">1.1 Objectionable Content</a> 
@@ -81,14 +83,22 @@
                         <li><a href="#developer-code-of-conduct" class="navigation__link child">5.6 Developer Code of Conduct</a></li>
                     </ul>
             </li>
-            <li><a href="#after-you-submit" class="navigation__link parent">After You Submit</a></li>
+            <li><a href="#after-you-submit" class="navigation__link parent">After You Submit</a></li> --}}
         </nav>
     </div>
 
     <div class="col-lg-9 col-md-9  col-sm-12 col-xs-12 page_head">
         <div class="page-section" id="1">
-          <h4 data-sidenav="" id="introduction">Introduction</h4>
-              <p>The guiding principle of the App&nbsp;Store is simple - we want to provide a safe experience for users to get apps and a great opportunity for all developers to be successful. We do this by offering a highly curated App&nbsp;Store where every app is reviewed by experts and an editorial team helps users discover new apps every day. For everything else there is always the open Internet. If the App&nbsp;Store model and guidelines are not best for your app or business idea that’s okay, we provide Safari for a great web experience too.</p>
+           
+            @foreach ($points as $point)
+            @foreach ($flows as $flow)
+          <h4 data-sidenav="" id="introduction">{{ $flow->title }}</h4>
+   
+            
+            <p>{{ $point->content }}</p>
+            @endforeach
+          @endforeach
+              {{-- <p>The guiding principle of the App&nbsp;Store is simple - we want to provide a safe experience for users to get apps and a great opportunity for all developers to be successful. We do this by offering a highly curated App&nbsp;Store where every app is reviewed by experts and an editorial team helps users discover new apps every day. For everything else there is always the open Internet. If the App&nbsp;Store model and guidelines are not best for your app or business idea that’s okay, we provide Safari for a great web experience too.</p>
               <p>On the following pages you will find our latest guidelines arranged into five clear sections: Safety, Performance, Business, Design, and Legal. The App&nbsp;Store is always changing and improving to keep up with the needs of our customers and our products. Your apps should change and improve as well in order to stay on the <span class="nowrap">App&nbsp;Store.</span></p>
               <p>A few other points to keep in mind:</p>
               <ul class="disc top-level">
@@ -99,9 +109,12 @@
               <li>You are responsible for making sure everything in your app complies with these guidelines, including ad networks, analytics services, and third-party SDKs, so review and choose them carefully.</li>
               <li>Some features and technologies that are not generally available to developers may be offered as an entitlement for limited use cases. For example, we offer entitlements for CarPlay&nbsp;Audio, HyperVisor, and Privileged File Operations. Review our documentation on developer.apple.com to learn more about entitlements.</li>
               </ul>
-              <p>We hope these guidelines help you sail through the App Review process, and that approvals and rejections remain consistent across the board. This is a living document; new apps presenting new questions may result in new rules at any time. Perhaps your app will trigger this. We love this stuff too, and honor what you do. We’re really trying our best to create the best platform in the world for you to express your talents and make a living, too.</p>
+              <p>We hope these guidelines help you sail through the App Review process, and that approvals and rejections remain consistent across the board. This is a living document; new apps presenting new questions may result in new rules at any time. Perhaps your app will trigger this. We love this stuff too, and honor what you do. We’re really trying our best to create the best platform in the world for you to express your talents and make a living, too.</p> 
         </div>
-        <div class="page-section" id="2">
+        --}}
+
+        
+        {{-- <div class="page-section" id="2">
             <h3 data-sidenav="" id="before-you-submit">Before You Submit</h3>
                 <p>To help your app approval go as smoothly as possible, review the common missteps listed below that can slow down the review process or trigger a rejection. This doesn’t replace the guidelines or guarantee approval, but making sure you can check every item on the list is a good start. If your app no longer functions as intended or you’re no longer actively supporting it, it will be removed from the <span class="nowrap">App&nbsp;Store.</span> <a href="#">Learn more about App&nbsp;Store Improvements</a>.</p>
                 <p>Make sure you:</p>
@@ -643,7 +656,7 @@
                     </ul>
                     <p>We’re excited to see what you come up with next!</p>
                     <p class="margin-top typography-body-reduced">Last Updated: 12 September 2019</p>
-                </div>
+                </div> --}}
             </div>
         </ul>
     </div>

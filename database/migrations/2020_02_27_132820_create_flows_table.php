@@ -16,6 +16,7 @@ class CreateFlowsTable extends Migration
         Schema::create('flows', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
+            $table->string('slug')->index();
             $table->unsignedBigInteger('department_id');
             $table->timestamps();
 

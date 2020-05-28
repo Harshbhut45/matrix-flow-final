@@ -14,4 +14,6 @@ class Department extends Model
     public $sortable = [
         'name',
     ];
+
+  
 }
