@@ -17,7 +17,6 @@ class PublicController extends Controller
     public function show($id)
     {
         $flow = Flow::where('id', $id)->first();
-       
     	if($flow) {
             $points = Point::where('flow_id', $flow->id)->get();
             $flows = Flow::all();

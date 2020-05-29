@@ -15,8 +15,11 @@
       <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12">
         <nav class="navigation" id="mainNav">
             @foreach ($flows as $flow)
-            <li><a href="#{{ $flow->title }}" class="navigation__link parent active">{{ $flow->title }}</a></li>
+            {{-- <li><a href="#{{ $flow->title }}" class="navigation__link parent active">{{ $flow->title }}</a></li> --}}
+
+            <li><a class="navigation__link parent {{ (url()->current() == \Request(['id' => $flow->title ]) ? 'active' : '') }}" href="#{{ $flow->title }}  ">{{ $flow->title }}</a></li>
             @endforeach
+           
             {{-- <li><a href="#before-you-submit" class="navigation__link parent">Before You Submit</a></li>
             <li><a href="#safety" class="navigation__link parent">1. Safety</a>
                 <ul class="sidenav_item_children">
@@ -90,14 +93,13 @@
     <div class="col-lg-9 col-md-9  col-sm-12 col-xs-12 page_head">
         <div class="page-section" id="1">
            
-            @foreach ($points as $point)
+        @foreach ($points as $point)
             @foreach ($flows as $flow)
-          <h4 data-sidenav="" id="introduction">{{ $flow->title }}</h4>
+                <h4 data-sidenav="" id="introduction">{{ $flow->title }}</h4>
    
-            
-            <p>{{ $point->content }}</p>
+                <p>{{ $point->content }}</p>
             @endforeach
-          @endforeach
+        @endforeach
               {{-- <p>The guiding principle of the App&nbsp;Store is simple - we want to provide a safe experience for users to get apps and a great opportunity for all developers to be successful. We do this by offering a highly curated App&nbsp;Store where every app is reviewed by experts and an editorial team helps users discover new apps every day. For everything else there is always the open Internet. If the App&nbsp;Store model and guidelines are not best for your app or business idea that’s okay, we provide Safari for a great web experience too.</p>
               <p>On the following pages you will find our latest guidelines arranged into five clear sections: Safety, Performance, Business, Design, and Legal. The App&nbsp;Store is always changing and improving to keep up with the needs of our customers and our products. Your apps should change and improve as well in order to stay on the <span class="nowrap">App&nbsp;Store.</span></p>
               <p>A few other points to keep in mind:</p>
