@@ -89,7 +89,7 @@ body {
   justify-content: center;
 }
 .page-section {
-    padding-left: 25px;
+    /* padding-left: 25px; */
     padding-bottom: 2em;
   }
   .navigation {
@@ -125,13 +125,18 @@ body {
     color: #000;
     opacity: 1px;
   }
+  .page_head h4:first-of-type {
+    padding-top: 0px;
+  }
   .page_head h3,.page_head h4 {
     font-size: 32px;
     line-height: 1.125;
+    padding-top: 1em;
     font-weight: 600;
     letter-spacing: 0.004em;
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
+  
   .page_head h3 {
     margin-top: 2em;
     padding-top: 2em;
@@ -142,8 +147,9 @@ body {
     font-weight: 500;
     line-height: 1.525;
     color: #333333;
-    margin:13.6px 0 0;
     letter-spacing: 0.004em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #dadada;
   }
   .page_head li {
     font-size: 18px;
